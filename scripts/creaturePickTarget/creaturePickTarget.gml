@@ -5,7 +5,7 @@ function creaturePickTarget(){
 		
 		var best = noone;
 		var bestDis = 99;
-		with(objCreature){
+		with(obaCreature){
 			if(aly != other.aly){
 				var d = distanceManhat(xSpot, ySpot, other.xSpot, other.ySpot);
 				if(d < bestDis){

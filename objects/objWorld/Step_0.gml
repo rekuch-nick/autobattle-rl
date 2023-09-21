@@ -37,7 +37,7 @@ if(state == State.play){
 	if(checkBattleEnd){
 		var playerUnits = 0;
 		var foeUnits = 0;
-		with(objCreature){
+		with(obaCreature){
 			if(aly == 1){ playerUnits ++; }
 			if(aly == -1){ foeUnits ++; }
 		}

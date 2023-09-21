@@ -10,7 +10,7 @@ hpMax = 80;
 
 
 combatRange = 1;
-d1 = 1;
-d2 = 4;
+meleeDamMin = 1;
+meleeDamMax = 4;
 
 atkCDMax = 30;

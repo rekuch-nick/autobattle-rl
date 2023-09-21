@@ -6,7 +6,7 @@ canMoveDiag = true;
 
 inCombatWith = noone;
 combatRange = 1;
-fat = 32;
+fat = 16;
 
 hp = 100;
 hpMax = 100;
@@ -18,8 +18,11 @@ moveCDMax = 30;
 
 atkCDMax = 30;
 atkCD = atkCDMax + irandom_range(0, 9);
-d1 = 1;
-d2 = 6;
+meleeDamMin = 1;
+meleeDamMax = 6;
+shotType = noone;
+rangeDamMin = 0; 
+rangeDamMax = 0;
 
 xSpot = floor(x / 32);
 ySpot = floor(y / 32);

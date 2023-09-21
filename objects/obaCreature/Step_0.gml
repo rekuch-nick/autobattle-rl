@@ -13,12 +13,24 @@ inCombatWith = creatureAttackTarget();
 if(inCombatWith != noone){
 	
 	
+	
+	
 	atkCD --;
 	if(atkCD < 1){
 		atkCD = atkCDMax;
-		if(combatRange == 1){
+		
+		
+		
+		
+		if( creatureInMelee(id, inCombatWith) ){
 			creatureBumpTowards(inCombatWith.xSpot, inCombatWith.ySpot);
 			creatureMelee(id, inCombatWith);
+		} else if(shotType != noone){
+			var s = instance_create_depth(x + 32, y + 32, ww.layerE, shotType);
+			s.rangeDamMin = rangeDamMin;
+			s.rangeDamMax = rangeDamMax;
+			s.aly = aly;
+			s.targetCreature = inCombatWith;
 		}
 	}
 	
@@ -67,9 +79,14 @@ if(y > ySpot * 32){ y -= 4; }
 if(hp < 1){
 	ww.checkBattleEnd = true;
 	
-	with(objCreature){
+	with(obaCreature){
 		if(inCombatWith == other.id){ inCombatWith = noone; }
 	}
+	
+	with(obaShot){
+		if(targetCreature == other.id){ targetCreature = noone; }
+	}
+	
 	ww.mmap[xSpot, ySpot] = noone;
 	instance_destroy();
 }

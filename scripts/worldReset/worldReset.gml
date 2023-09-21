@@ -1,6 +1,7 @@
 function worldReset(){
 	
-	with(objCreature){ instance_destroy(); }
+	with(obaCreature){ instance_destroy(); }
+	with(obaShot){ instance_destroy(); }
 	
 	
 	for(var a=0; a<W; a++){ for(var b=0; b<H; b++){

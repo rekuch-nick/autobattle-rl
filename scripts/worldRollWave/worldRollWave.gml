@@ -6,15 +6,21 @@ function worldRollWave(){
 	}
 	
 	
-	waveArmy = [objMilitia, objMilitia, objMilitia, objMilitia,
-	objMilitia, objMilitia, objMilitia, objMilitia,
-	objMilitia, objMilitia, objMilitia, objMilitia,
-	objMilitia, objMilitia, objMilitia, objMilitia,
-	objMilitia, objMilitia, objMilitia, objMilitia,
-	objMilitia, objMilitia, objMilitia, objMilitia,
-	objMilitia, objMilitia, objMilitia, objMilitia,
+	waveArmy = [objMilitia, objMilitia, objMilitia, objMilitia];
+	repeat(wave + 1){ 
+		arrayAdd(waveArmy, objMilitia); 
+		arrayAdd(waveArmy, objMilitia); 
+		arrayAdd(waveArmy, objMilitia); 
+		arrayAdd(waveArmy, objMilitia); 
+	}
 	
-		];
+	
+	playerArmy = [];
+	with(objPlayerSquad){
+		repeat(num){
+			arrayAdd(other.playerArmy, unit);
+		}
+	}
 	
 	
 	

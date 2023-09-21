@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "objMilitia",
+  "name": "effSpark",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
@@ -12,8 +12,8 @@
     "path": "folders/Objects.yy",
   },
   "parentObjectId": {
-    "name": "obaCreature",
-    "path": "objects/obaCreature/obaCreature.yy",
+    "name": "objEffect",
+    "path": "objects/objEffect/objEffect.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,
@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "imgBlank",
-    "path": "sprites/imgBlank/imgBlank.yy",
+    "name": "imgSpark",
+    "path": "sprites/imgSpark/imgSpark.yy",
   },
   "spriteMaskId": null,
   "visible": true,
