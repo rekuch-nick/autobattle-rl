@@ -23,6 +23,7 @@
     {"name":"creatureMelee","order":14,"path":"scripts/creatureMelee/creatureMelee.yy",},
     {"name":"inBounds","order":4,"path":"scripts/inBounds/inBounds.yy",},
     {"name":"creatureCanEnter","order":10,"path":"scripts/creatureCanEnter/creatureCanEnter.yy",},
+    {"name":"worldReset","order":15,"path":"scripts/worldReset/worldReset.yy",},
     {"name":"worldRollWave","order":2,"path":"scripts/worldRollWave/worldRollWave.yy",},
     {"name":"creatureAttackTarget","order":12,"path":"scripts/creatureAttackTarget/creatureAttackTarget.yy",},
     {"name":"pathingGetCursor","order":7,"path":"scripts/pathingGetCursor/pathingGetCursor.yy",},

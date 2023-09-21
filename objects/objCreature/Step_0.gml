@@ -65,6 +65,8 @@ if(y > ySpot * 32){ y -= 4; }
 
 
 if(hp < 1){
+	ww.checkBattleEnd = true;
+	
 	with(objCreature){
 		if(inCombatWith == other.id){ inCombatWith = noone; }
 	}

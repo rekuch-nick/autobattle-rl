@@ -9,18 +9,15 @@ layerF = -1;
 layerB = -100;
 layerM = -200;
 
+checkBattleEnd = false;
+
 draw_set_font(fntPlain);
 draw_set_halign(fa_center);
 getInput();
 
 
 
-for(var a=0; a<W; a++){ for(var b=0; b<H; b++){
-	fmap[a, b] = noone;
-	bmap[a, b] = noone;
-	mmap[a, b] = noone;
-}}
-
+worldReset();
 
 
 

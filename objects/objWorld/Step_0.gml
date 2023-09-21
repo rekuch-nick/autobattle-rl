@@ -30,3 +30,29 @@ if(state == State.playStarting){
 		state = State.play;
 	}
 }
+
+
+
+if(state == State.play){
+	if(checkBattleEnd){
+		var playerUnits = 0;
+		var foeUnits = 0;
+		with(objCreature){
+			if(aly == 1){ playerUnits ++; }
+			if(aly == -1){ foeUnits ++; }
+		}
+		checkBattleEnd = false;
+		if(foeUnits < 1){
+			worldReset();
+			worldRollShop();
+			state = State.shop;
+			return;
+		} else if (playerUnits < 1){
+			// game over
+		}
+	}
+	
+	
+	
+	
+}

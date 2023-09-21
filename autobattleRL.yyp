@@ -40,6 +40,7 @@
     {"id":{"name":"creatureMelee","path":"scripts/creatureMelee/creatureMelee.yy",},},
     {"id":{"name":"inBounds","path":"scripts/inBounds/inBounds.yy",},},
     {"id":{"name":"creatureCanEnter","path":"scripts/creatureCanEnter/creatureCanEnter.yy",},},
+    {"id":{"name":"worldReset","path":"scripts/worldReset/worldReset.yy",},},
     {"id":{"name":"getInput","path":"scripts/getInput/getInput.yy",},},
     {"id":{"name":"fntPlain","path":"fonts/fntPlain/fntPlain.yy",},},
     {"id":{"name":"worldRollWave","path":"scripts/worldRollWave/worldRollWave.yy",},},
