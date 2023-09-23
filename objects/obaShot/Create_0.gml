@@ -19,3 +19,5 @@ damageOnHit = true;
 
 pointAtTarget = false;
 
+fireburstSmallChance = 0;
+fireburstChance = 0;

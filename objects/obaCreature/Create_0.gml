@@ -29,3 +29,16 @@ ySpot = floor(y / 32);
 xLast = xSpot;
 yLast = ySpot;
 
+trollRegen = 0;
+summonDie = 0;
+
+flicker = false;
+
+
+mp = 0;
+spell = noone;
+spellChance = 0;
+summonKind = noone;
+
+poison = false;
+poisonChance = 0;

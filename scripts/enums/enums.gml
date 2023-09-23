@@ -17,5 +17,16 @@ function enums(){
 		direct,
 	}
 	
-
+	enum Spell {
+		summon,
+		healing,
+	}
+	
+	
+	enum ButtonCode {
+		startGame,
+		startFight,
+		buy,
+		shopPageTab,
+	}
 }

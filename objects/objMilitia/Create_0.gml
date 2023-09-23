@@ -7,7 +7,7 @@ img = "m";
 hp = 80;
 hpMax = 80;
 
-
+moveCDMax = 30;
 
 combatRange = 1;
 meleeDamMin = 1;

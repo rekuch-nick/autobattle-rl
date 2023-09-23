@@ -8,7 +8,7 @@ hp = 50;
 hpMax = 50;
 
 
-
+moveCDMax = 30;
 
 meleeDamMin = 1;
 meleeDamMax = 4;

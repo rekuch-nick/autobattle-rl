@@ -2,6 +2,15 @@ if(ww.state != State.play){ return; }
 
 
 
+if(hp > 0){
+	hp = clamp(hp + trollRegen, 0, hpMax);
+	hp = clamp(hp - summonDie, 0, hpMax);
+	if(poison){
+		hp -= .15;
+	}
+}
+
+
 inCombatWith = creatureAttackTarget();
 
 
@@ -20,13 +29,33 @@ if(inCombatWith != noone){
 		atkCD = atkCDMax;
 		
 		
+		if(mp > 0 && spell != noone && irandom_range(0, 99) < spellChance){
+			if(spell == Spell.summon){
+				var t = tileEmptyAdjacent(xSpot, ySpot);
+				if(t != noone){
+					mp --;
+					ww.mmap[t.a, t.b] = instance_create_depth(t.a * 32, t.b * 32, depth, summonKind);
+					ww.mmap[t.a, t.b].aly = aly;
+				}
+			}
+			if(spell == Spell.healing){
+				mp --;
+				healBurst(xSpot, ySpot, 6, aly, 200);
+			}
+			
+			
+		}
+		
+		
+		
+		
 		
 		
 		if( creatureInMelee(id, inCombatWith) ){
 			creatureBumpTowards(inCombatWith.xSpot, inCombatWith.ySpot);
 			creatureMelee(id, inCombatWith);
 		} else if(shotType != noone){
-			var s = instance_create_depth(x + 32, y + 32, ww.layerE, shotType);
+			var s = instance_create_depth(x + fat, y + fat, ww.layerE, shotType);
 			s.rangeDamMin = rangeDamMin;
 			s.rangeDamMax = rangeDamMax;
 			s.aly = aly;
@@ -59,7 +88,9 @@ if(inCombatWith != noone){
 
 
 
-
+if(flicker){
+	image_alpha = random_range(.5, 1);
+}
 
 
 

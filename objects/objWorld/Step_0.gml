@@ -1,9 +1,12 @@
 getInput();
+ms ++; if(ms >= 60){ ms = 0; }
 
 
 if(state == State.title){
 	
-	if(pressedOK){
+	if(startPressed || pressedOK){
+		startPressed = false;
+		with(objButton){ instance_destroy(); }
 		worldRollShop();
 		state = State.shop;
 		return;
@@ -15,7 +18,9 @@ if(state == State.title){
 
 if(state == State.shop){
 	
-	if(pressedOK){
+	if(startPressed || pressedOK){
+		startPressed = false;
+		with(objButton){ instance_destroy(); }
 		worldRollWave();
 		state = State.playStarting;
 		stateCD = 30 * 1;
@@ -46,6 +51,7 @@ if(state == State.play){
 			worldReset();
 			worldRollShop();
 			state = State.shop;
+			playerCoins += coinReward;
 			return;
 		} else if (playerUnits < 1){
 			// game over

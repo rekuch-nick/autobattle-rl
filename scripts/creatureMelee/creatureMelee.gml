@@ -4,4 +4,8 @@ function creatureMelee(c1, c2){
 	
 	c2.hp -= dam;
 	
+	
+	if(irandom_range(0, 99) < c1.poisonChance){ c2.poison = true; }
+	
+	
 }

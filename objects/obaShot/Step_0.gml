@@ -48,6 +48,15 @@ if(!notYet && inBounds(xSpot, ySpot)){
 				m.hp -= dam;
 			}
 			
+			
+			if(irandom_range(0, 99) < fireburstSmallChance){
+				burstSpot(m.xSpot, m.ySpot, effFire, rangeDamMin, rangeDamMax);
+			} else if (irandom_range(0, 99) < fireburstChance){
+				burstPathRandom(m.xSpot, m.ySpot, 6, rangeDamMin, rangeDamMax, effFire, aly);
+			}
+			
+			
+			
 			//instance_create_depth(x, y, depth, effSpark);
 		}
 	}
