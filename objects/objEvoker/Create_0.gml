@@ -5,18 +5,18 @@ img = "w";
 col = c_red;
 
 
-hp = 30;
-hpMax = 30;
+hp = 100;
+hpMax = 100;
 
 
 moveCDMax = 30;
 
-meleeDamMin = 1;
+meleeDamMin = 2;
 meleeDamMax = 12;
 
 combatRange = 14;
 shotType = objFirebolt;
 rangeDamMin = 2; 
-rangeDamMax = 16;
+rangeDamMax = 12;
 
 atkCDMax = 60;

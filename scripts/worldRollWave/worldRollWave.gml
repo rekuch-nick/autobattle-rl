@@ -5,7 +5,7 @@ function worldRollWave(){
 		var a = random_range(0, 1);
 	}
 	
-	coinReward = choose(5, 10, 15) + wave * 2;
+	coinReward = choose(15, 20, 25) + wave * 10;
 	waveArmy = [];
 	
 	//if(wave == 4 && irandom_range(1, 4) == 1){

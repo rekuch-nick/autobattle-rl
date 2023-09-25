@@ -2,7 +2,7 @@ event_inherited();
 
 
 img = "k";
-
+col = c_gray;
 
 hp = 450;
 hpMax = 450;

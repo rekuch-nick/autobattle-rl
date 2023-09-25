@@ -8,6 +8,7 @@ function playerGainUnit(unit, nam){
 		o.num ++;
 	}
 
-
+	
+	ww.playerUnitsTotal ++;
 
 }

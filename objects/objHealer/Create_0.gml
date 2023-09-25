@@ -11,18 +11,19 @@ hpMax = 150;
 moveCDMax = 25;
 
 
-meleeDamMin = 2;
-meleeDamMax = 8;
+meleeDamMin = 4;
+meleeDamMax = 24;
 combatRange = 2;
 shotType = objArrow;
-rangeDamMin = 2; 
-rangeDamMax = 8;
+rangeDamMin = 4; 
+rangeDamMax = 24;
 
 
 
-atkCDMax = 20;
+atkCDMax = 30;
 
 
 mp = 6;
 spell = Spell.healing;
 spellChance = 20;
+spellChanceLoss = 2;

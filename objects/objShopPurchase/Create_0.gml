@@ -2,7 +2,7 @@ event_inherited();
 
 txt = "Unit"; 
 price = 10; 
-priceUp = 2; 
+priceUp = 1; 
 unit = objMilitia;
 
 

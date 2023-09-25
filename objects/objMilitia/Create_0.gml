@@ -2,15 +2,15 @@ event_inherited();
 
 
 img = "m";
+col = ww.cBrownSoft;
 
-
-hp = 80;
-hpMax = 80;
+hp = 100;
+hpMax = 100;
 
 moveCDMax = 30;
 
 combatRange = 1;
 meleeDamMin = 1;
-meleeDamMax = 4;
+meleeDamMax = 6;
 
-atkCDMax = 30;
+atkCDMax = 25;

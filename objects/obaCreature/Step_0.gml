@@ -10,12 +10,9 @@ if(hp > 0){
 	}
 }
 
+if(freezeImmune){ frozen = 0; }
 
 inCombatWith = creatureAttackTarget();
-
-
-
-
 
 
 
@@ -25,11 +22,18 @@ if(inCombatWith != noone){
 	
 	
 	atkCD --;
+	if(rage > 0){ rage --; atkCD -= 2; }
 	if(atkCD < 1){
 		atkCD = atkCDMax;
 		
+		if(mindControl && irandom_range(0, 99) < mindSave){
+			mindControl = false; aly *= -1; return;
+		}
+		
 		
 		if(mp > 0 && spell != noone && irandom_range(0, 99) < spellChance){
+			spellChance -= spellChanceLoss;
+			
 			if(spell == Spell.summon){
 				var t = tileEmptyAdjacent(xSpot, ySpot);
 				if(t != noone){
@@ -60,17 +64,30 @@ if(inCombatWith != noone){
 			s.rangeDamMax = rangeDamMax;
 			s.aly = aly;
 			s.targetCreature = inCombatWith;
+			
+			if(limitedAmmo){ 
+				ammo --;
+				if(ammo < 1){
+					shotType = noone;
+					combatRange = 1;
+				}
+			}
 		}
 	}
 	
 } else {
 
-
+	if(frozen > 0){
+		frozen --;
+		moveCD = max(moveCD + 1, 2);
+	}
 	moveCD --;
+	if(rage > 0){ rage --; moveCD -= 1; }
 	if(moveCD < 1){
 		moveCD = moveCDMax;
 		
 		var tar = creaturePickTarget();
+		
 		if(tar != noone){
 			
 			if(tar != noone && creatureCanEnter(tar.a, tar.b)){
@@ -79,7 +96,12 @@ if(inCombatWith != noone){
 				ySpot = tar.b;
 				ww.mmap[xSpot, ySpot] = id;
 			}
+		} else {
+			//if tar == noone, stuck is likely, so lose abilities that can make stuck
+			targetOutOfRange = 0;
 		}
+		
+		
 	}
 	
 	

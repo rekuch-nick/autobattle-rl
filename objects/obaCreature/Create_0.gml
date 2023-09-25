@@ -39,6 +39,32 @@ mp = 0;
 spell = noone;
 spellChance = 0;
 summonKind = noone;
+spellChanceLoss = 0;
 
 poison = false;
 poisonChance = 0;
+
+mindControl = false;
+mindSave = 10;
+
+frozen = 0;
+meleeFreezeChance = 0;
+meleeFreezePower = 120;
+freezeImmune = false;
+
+retaliate = 0;
+
+
+limitedAmmo = false;
+ammo = 0;
+
+
+rageChance = 0;
+rage = 0;
+ragePower = 60;
+
+arrowDodgeChance = 0;
+
+targetUnPoisonedBonus = 0;
+targetOutOfRange = 0;
+stepTowards = noone;

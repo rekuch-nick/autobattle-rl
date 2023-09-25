@@ -12,10 +12,10 @@ hpMax = 650;
 
 combatRange = 1;
 meleeDamMin = 6;
-meleeDamMax = 24;
+meleeDamMax = 36;
 
 atkCDMax = 25;
 
-moveCDMax = 40;
+moveCDMax = 25;
 
 trollRegen = .1;

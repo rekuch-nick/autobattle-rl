@@ -4,5 +4,5 @@ moveSpeed = 10;
 pointAtTarget = true;
 
 
-fireburstSmallChance = 20;
-fireburstChance = 20;
+fireburstSmallChance = 30;
+fireburstChance = 30;

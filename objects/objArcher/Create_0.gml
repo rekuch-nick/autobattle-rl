@@ -2,20 +2,20 @@ event_inherited();
 
 
 img = "a";
+col = ww.cBrownSoft;
 
-
-hp = 50;
-hpMax = 50;
+hp = 80;
+hpMax = 80;
 
 
 moveCDMax = 30;
 
 meleeDamMin = 1;
-meleeDamMax = 4;
+meleeDamMax = 6;
 
 combatRange = 20;
 shotType = objArrow;
 rangeDamMin = 2; 
-rangeDamMax = 8;
+rangeDamMax = 12;
 
 atkCDMax = 50;

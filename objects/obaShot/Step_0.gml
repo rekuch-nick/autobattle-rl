@@ -45,17 +45,22 @@ if(!notYet && inBounds(xSpot, ySpot)){
 			
 			if(damageOnHit){
 				var dam = irandom_range(rangeDamMin, rangeDamMax);
+				if(irandom_range(0, 99) < m.arrowDodgeChance){ dam = 0; }
 				m.hp -= dam;
 			}
 			
 			
-			if(irandom_range(0, 99) < fireburstSmallChance){
-				burstSpot(m.xSpot, m.ySpot, effFire, rangeDamMin, rangeDamMax);
-			} else if (irandom_range(0, 99) < fireburstChance){
-				burstPathRandom(m.xSpot, m.ySpot, 6, rangeDamMin, rangeDamMax, effFire, aly);
+			if(irandom_range(0, 99) < fireburstChance){
+				burstSpot(m.xSpot, m.ySpot, effFire, rangeDamMin, rangeDamMax, Element.fire);
+			} else if (irandom_range(0, 99) < fireburstSmallChance){
+				burstPathRandom(m.xSpot, m.ySpot, 6, 2, rangeDamMin, rangeDamMax, effFire, aly, Element.fire);
 			}
 			
-			
+			if(irandom_range(0, 99) < controlChance){
+				m.mindControl = !m.mindControl;
+				m.aly *= -1;
+				ww.checkBattleEnd = true;
+			}
 			
 			//instance_create_depth(x, y, depth, effSpark);
 		}

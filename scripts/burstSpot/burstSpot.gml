@@ -1,4 +1,4 @@
-function burstSpot(a, b, eff, dMin, dMax){
+function burstSpot(a, b, eff, dMin, dMax, ele){
 	
 	if(!inBounds(a, b)){ return; }
 	

@@ -21,3 +21,4 @@ pointAtTarget = false;
 
 fireburstSmallChance = 0;
 fireburstChance = 0;
+controlChance = 0;

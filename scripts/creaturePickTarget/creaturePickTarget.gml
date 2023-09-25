@@ -1,5 +1,13 @@
 function creaturePickTarget(){
 	
+	
+	
+	if(stepTowards != noone){
+		var r = creatureAdjacentTowards(stepTowards.xSpot, stepTowards.ySpot);
+		stepTowards = noone;
+		return r;
+	}
+	
 	if(ai == AI.plain){ // find closest enemy
 		
 		

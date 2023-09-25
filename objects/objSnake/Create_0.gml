@@ -2,17 +2,20 @@ event_inherited();
 
 
 img = "s";
+col = ww.cSnakeGreen;
 
+hp = 30;
+hpMax = 30;
 
-hp = 40;
-hpMax = 40;
-
-moveCDMax = 20;
+moveCDMax = 30;
 
 combatRange = 1;
-meleeDamMin = 5;
-meleeDamMax = 8;
+meleeDamMin = 1;
+meleeDamMax = 6;
 
-atkCDMax = 8;
+atkCDMax = 15;
 
-poisonChance = 10;
+moveCDMax = 10;
+
+poisonChance = 25;
+targetUnPoisonedBonus = 10;

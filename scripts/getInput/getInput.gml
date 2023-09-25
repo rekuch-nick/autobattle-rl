@@ -1,5 +1,10 @@
 function getInput(){
 	
+	xIn = 0;
+	if(keyboard_check(vk_left)){ xIn --; }
+	if(keyboard_check(vk_right)){ xIn ++; }
+	
+	
 	pressedOK = keyboard_check_pressed(vk_enter);
 	pressedNO = keyboard_check_pressed(vk_backspace);
 	

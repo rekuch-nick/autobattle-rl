@@ -11,6 +11,11 @@ layerM = -200;
 layerE = -500;
 
 cYellowSoft = $B2F9FF;
+cBrownSoft = $5180A3;
+cBlueSoft = $E5D0A0;
+cPink = $C29AF4;
+cSnakeGreen = $44B224;
+cBlueOrc = $B28100;
 
 checkBattleEnd = false;
 
@@ -29,22 +34,30 @@ st.buttonCode = ButtonCode.startGame;
 startPressed = false
 
 
-//playerArmy = [objKnight, objArcher, objArcher, objArcher, objArcher];
-playerCoins = 0;
 
+
+
+
+
+
+playerCoins = 999990060; //////
+playerUnitLevel = 0;
+playerUnitMax = 161;
+playerSquadMax = 14;
 
 var s = instance_create_depth(64, 100, 0, objPlayerSquad);
-s.nam = "Knight"; s.unit = objKnight; s.num = 2;
-
-//var s = instance_create_depth(64, 100, 0, objPlayerSquad);
-//s.nam = "Ogre Mage"; s.unit = objOgreMage; s.num = 4;
+s.nam = "Fighter"; s.unit = objFighter; s.num = 4;
+//s.nam = "DEBUG"; s.unit = objRogue; s.num = 6;
 
 
 //var s = instance_create_depth(64, 132, 0, objPlayerSquad);
-//s.nam = "Archer"; s.unit = objArcher; s.num = 2;
+//s.nam = "Archer"; s.unit = objArcher; s.num = 4;
 
-var s = instance_create_depth(64, 132, 0, objPlayerSquad);
-s.nam = "White Mage"; s.unit = objHealer; s.num = 4;
+//var s = instance_create_depth(64, 132, 0, objPlayerSquad);
+//s.nam = "Enchanter"; s.unit = objEnchanter; s.num = 4;
+
+//var s = instance_create_depth(64, 132, 0, objPlayerSquad);
+//s.nam = "White Mage"; s.unit = objHealer; s.num = 4;
 
 
 
@@ -52,6 +65,10 @@ s.nam = "White Mage"; s.unit = objHealer; s.num = 4;
 //s.nam = "Pyro Mage"; s.unit = objEvoker; s.num = 6;
 
 
+playerUnitsTotal = 0;
+with(objPlayerSquad){
+	ww.playerUnitsTotal += num;
+}
 
 
 stateCD = 0;

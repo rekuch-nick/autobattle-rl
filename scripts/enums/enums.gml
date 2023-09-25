@@ -5,6 +5,7 @@ function enums(){
 		title,
 		play,
 		playStarting,
+		playStopping,
 		shop,
 	}
 
@@ -29,4 +30,22 @@ function enums(){
 		buy,
 		shopPageTab,
 	}
+	
+	enum Element {
+		normal,
+		fire,
+		lightning,
+	}
+	
+	enum Role {
+		other,
+		brute,
+		fighter,
+		striker,
+		blaster,
+		support,
+		
+	}
+	
+	
 }

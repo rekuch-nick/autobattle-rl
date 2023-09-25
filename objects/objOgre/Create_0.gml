@@ -5,16 +5,16 @@ img = "O";
 col = ww.cYellowSoft;
 
 
-hp = 650;
-hpMax = 650;
+hp = 600;
+hpMax = 600;
 
 
 
 combatRange = 1;
-meleeDamMin = 1;
+meleeDamMin = 4;
 meleeDamMax = 24;
 
-atkCDMax = 40;
+atkCDMax = 60;
 
 moveCDMax = 40;
 

@@ -1,5 +1,5 @@
 function worldPlaceArmy(army, aly){
-	
+	var tries = 0;
 	
 	for(var i=0; i<array_length(army); i++){
 		var t = army[i];
@@ -17,6 +17,9 @@ function worldPlaceArmy(army, aly){
 		}
 		
 		do {
+			tries ++;
+			if(tries > 10000){ return; }
+			
 			var a = irandom_range(a1, a2);
 			var b = irandom_range(b1, b2);
 		} until (
@@ -29,6 +32,14 @@ function worldPlaceArmy(army, aly){
 		
 		var c = instance_create_depth(a * 32, b * 32, layerM, t);
 		c.aly = aly;
+		
+		if(aly == 1){ // player upgrades
+			
+			
+			
+			
+		}
+		
 		mmap[a, b] = c;
 		
 		

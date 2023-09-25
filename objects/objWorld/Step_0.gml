@@ -4,6 +4,8 @@ ms ++; if(ms >= 60){ ms = 0; }
 
 if(state == State.title){
 	
+	seed += xIn;
+	
 	if(startPressed || pressedOK){
 		startPressed = false;
 		with(objButton){ instance_destroy(); }
@@ -36,6 +38,17 @@ if(state == State.playStarting){
 	}
 }
 
+if(state == State.playStopping){
+	stateCD --;
+	if(stateCD < 1){
+		worldReset();
+		worldRollShop();
+		state = State.shop;
+		playerCoins += coinReward;
+		return;
+	}
+}
+
 
 
 if(state == State.play){
@@ -48,10 +61,8 @@ if(state == State.play){
 		}
 		checkBattleEnd = false;
 		if(foeUnits < 1){
-			worldReset();
-			worldRollShop();
-			state = State.shop;
-			playerCoins += coinReward;
+			state = State.playStopping;
+			stateCD = 30 * 2;
 			return;
 		} else if (playerUnits < 1){
 			// game over
