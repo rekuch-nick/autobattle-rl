@@ -20,6 +20,8 @@ function creatureAttackTarget(){
 				if(other.targetUnPoisonedBonus > 0 && dis == 2){ tarScore -= 2; }
 				
 				if(!poison){ tarScore += other.targetUnPoisonedBonus; }
+				if(other.targetRandomBonus > 0){ tarScore += irandom_range(0, other.targetRandomBonus); }
+				if(other.targetLowBonus > 0){ tarScore -= floor(hp / 10); }
 				tarScore -= dis;
 				
 				if(best == noone || tarScore > bestScore){

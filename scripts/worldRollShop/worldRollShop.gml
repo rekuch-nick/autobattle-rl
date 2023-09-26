@@ -36,6 +36,24 @@ function worldRollShop(){
 		s.txt = c.nam; s.price = c.cost; s.unit = c.typ;
 	}
 	
+	if(playerUnitLevel > 0){
+		var s = instance_create_depth(x1Purchase, 100 + 4 * 90, -1, objShopPurchase);
+		var c = getCreature(irandom_range(1, 5), ww.playerUnitLevel - 1 );
+		s.txt = c.nam; s.price = c.cost; s.unit = c.typ;
+	}
+	
+	if(playerUnitLevel > 1){
+		var s = instance_create_depth(x1Purchase, 100 + 5 * 90, -1, objShopPurchase);
+		var c = getCreature(irandom_range(1, 5), irandom_range(0, ww.playerUnitLevel - 2) );
+		s.txt = c.nam; s.price = c.cost; s.unit = c.typ;
+	}
+	
+	
+	if(playerUnitMax < playerUnitMaxMax){
+		var s = instance_create_depth(x1Purchase, 100, -1, objShopPurchase);
+		s.txt = "Max Army Size"; s.price = playerArmySizeCost(); s.unit = noone;
+	}
+	
 	
 	if(playerUnitLevel == 0){
 		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
@@ -43,6 +61,9 @@ function worldRollShop(){
 	} else if(playerUnitLevel == 1){
 		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
 		s.txt = "Unit Level 2"; s.price = 200; s.unit = noone;
+	} else if(playerUnitLevel == 2){
+		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
+		s.txt = "Unit Level 3"; s.price = 400; s.unit = noone;
 	}
 	
 	

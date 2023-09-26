@@ -46,6 +46,26 @@ if(inCombatWith != noone){
 				mp --;
 				healBurst(xSpot, ySpot, 6, aly, 200);
 			}
+			if(spell == Spell.rage){
+				var c = findClosestOther(50, false, aly);
+				if(c != noone && c.rage < 1){
+					mp --;
+					c.rage = 60 * 60;
+				}
+			}
+			if(spell == Spell.warp){
+				var a = aly == 1 ? irandom_range(ww.W - 5, ww.W - 1) : irandom_range(0, 5);
+				var b = irandom_range(0, ww.H - 1);
+				if(ww.bmap[a, b] == noone && ww.mmap[a, b] == noone){
+					ww.mmap[xSpot, ySpot] = instance_create_depth(xSpot * 32, ySpot * 32, depth, summonKind);
+					ww.mmap[xSpot, ySpot].aly = aly;
+					
+					ww.mmap[a, b] = id;
+					xSpot = a; ySpot = b;
+					x = a * 32; y = b * 32;
+					mp --;
+				}
+			}
 			
 			
 		}

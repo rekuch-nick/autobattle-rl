@@ -10,19 +10,7 @@ function creaturePickTarget(){
 	
 	if(ai == AI.plain){ // find closest enemy
 		
-		
-		var best = noone;
-		var bestDis = 99;
-		with(obaCreature){
-			if(aly != other.aly){
-				var d = distanceManhat(xSpot, ySpot, other.xSpot, other.ySpot);
-				if(d < bestDis){
-					best = id;
-					bestDis = d;
-				}
-			}
-		}
-		
+		var best = findClosestByAly(xSpot, ySpot, -aly);
 		var tar = best == noone ? best : { a: best.xSpot, b: best.ySpot };
 		if(tar == noone){ return noone; }
 		tar = pathing(xSpot, ySpot, tar.a, tar.b);

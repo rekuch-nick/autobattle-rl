@@ -68,3 +68,7 @@ arrowDodgeChance = 0;
 targetUnPoisonedBonus = 0;
 targetOutOfRange = 0;
 stepTowards = noone;
+
+
+targetRandomBonus = 0;
+targetLowBonus = 0;

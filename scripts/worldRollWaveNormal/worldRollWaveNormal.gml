@@ -3,11 +3,17 @@ function worldRollWaveNormal(){
 	
 	waveArmy = [];
 	var level = 0;
+	//var level2 = 0;
 	
 	var n = 4 + (wave * 4);
+	n += floor(wave / 10) * 5;
 	
 	if(n > 50){ n -= 30; level ++; }
 	if(n > 50){ n -= 30; level ++; }
+	if(n > 50){ n -= 30; level ++; }
+	
+	//level2 = level;
+	//if(wave % 7 == 0){ level2 ++; }
 	
 	var c1 = getCreature(irandom_range(1, 5), level).typ;
 	var c2 = getCreature(irandom_range(1, 5), level).typ;

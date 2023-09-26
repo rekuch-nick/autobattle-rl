@@ -1,12 +1,12 @@
 event_inherited();
 
 
-img = "w";
-col = c_white;
+img = "b";
+col = ww.cYellowSoft;
 
 
-hp = 150;
-hpMax = 150;
+hp = 250;
+hpMax = 250;
 
 moveCDMax = 25;
 
@@ -23,7 +23,7 @@ rangeDamMax = 24;
 atkCDMax = 30;
 
 
-mp = 5;
-spell = Spell.healing;
-spellChance = 18;
-spellChanceLoss = 2;
+mp = 3;
+spell = Spell.rage;
+spellChance = 45;
+spellChanceLoss = 20;

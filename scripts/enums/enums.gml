@@ -21,6 +21,8 @@ function enums(){
 	enum Spell {
 		summon,
 		healing,
+		rage,
+		warp,
 	}
 	
 	

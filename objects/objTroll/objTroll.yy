@@ -8,8 +8,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "mobs",
-    "path": "folders/Objects/mobs.yy",
+    "name": "t3",
+    "path": "folders/Objects/mobs/t3.yy",
   },
   "parentObjectId": {
     "name": "obaCreature",

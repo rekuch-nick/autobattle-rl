@@ -40,14 +40,16 @@ startPressed = false
 
 
 
+playerCoins = 60;
 playerCoins = 999990060; //////
 playerUnitLevel = 0;
-playerUnitMax = 161;
+playerUnitMax = 20;
+playerUnitMaxMax = 161;
 playerSquadMax = 14;
 
 var s = instance_create_depth(64, 100, 0, objPlayerSquad);
 s.nam = "Fighter"; s.unit = objFighter; s.num = 4;
-//s.nam = "DEBUG"; s.unit = objRogue; s.num = 6;
+//s.nam = "DEBUG"; s.unit = objArcherLong; s.num = 4;
 
 
 //var s = instance_create_depth(64, 132, 0, objPlayerSquad);

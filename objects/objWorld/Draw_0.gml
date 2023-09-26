@@ -13,9 +13,10 @@ if(state == State.title){
 if(state == State.shop){
 	
 	//draw_text(room_width / 2, 700, "Press ENTER to fight wave " + string(wave));
-	
-	var s = playerUnitsTotal < playerUnitMax ? "Your Army:" : "     Army: (Full) "
-	draw_text(120, 70, s);
+	draw_set_halign(fa_left);
+	var s = "" + string(playerUnitsTotal) + " / " + string(playerUnitMax);
+	draw_text(20, 70, s);
+	draw_set_halign(fa_center);
 	draw_text_color(1020, 10, "$" + string(playerCoins), c_yellow, c_yellow, c_yellow, c_yellow, 1);
 	
 }
