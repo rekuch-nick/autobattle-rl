@@ -1,4 +1,5 @@
 room_speed = 60;
+battleSpeed = 60;
 ms = 0;
 W = 37;
 H = 23;
@@ -16,6 +17,7 @@ cBlueSoft = $E5D0A0;
 cPink = $C29AF4;
 cSnakeGreen = $44B224;
 cBlueOrc = $B28100;
+cBrownThorn = $053C66;
 
 checkBattleEnd = false;
 
@@ -34,18 +36,22 @@ st.buttonCode = ButtonCode.startGame;
 startPressed = false
 
 
-
+rngCount = 0;
 
 
 
 
 
 playerCoins = 60;
-playerCoins = 999990060; //////
+//playerCoins = 999990060; //////
 playerUnitLevel = 0;
 playerUnitMax = 20;
 playerUnitMaxMax = 161;
 playerSquadMax = 14;
+
+playerHPBonus = 0;
+playerDruidSummonPower = 1;
+
 
 var s = instance_create_depth(64, 100, 0, objPlayerSquad);
 s.nam = "Fighter"; s.unit = objFighter; s.num = 4;

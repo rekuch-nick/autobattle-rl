@@ -23,11 +23,24 @@ if(ww.clickL){
 					ww.playerUnitLevel = 2;
 				} else if (txt == "Unit Level 3") {
 					ww.playerUnitLevel = 3;
+					
+				} else if (txt == "Promote Fighters") {
+					playerUnitReplace(objFighter, objFighterElite);
+				} else if (txt == "Promote Goblins") {
+					playerUnitReplace(objGoblin, objGoblinAssassian);
+				} else if (txt == "Ogres learn Magic") {
+					playerUnitReplace(objOgre, objOgreMage);
+				} else if (txt == "Druid Power") {
+					ww.playerDruidSummonPower ++;
 				
 				} else if (txt == "Max Army Size") {
 					ww.playerUnitMax = clamp(ww.playerUnitMax + 10, 0, ww.playerUnitMaxMax);
 					price = playerArmySizeCost();
-					if(ww.playerUnitMax >= ww.playerUnitMaxMax){ destroy = false; }
+					destroy = false;
+				} else if (txt == "HP Bonus") {
+					ww.playerHPBonus += 10;
+					destroy = false;
+					price = playerHPBonusCost();
 				} else {
 					playerGainUnit(unit, txt);
 					destroy = false;

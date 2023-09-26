@@ -12,6 +12,7 @@ function getCreatureDesc(o){
 	if(o == objDruid){ return "L1 weak short ranged attacker. Summons thornlings."; }
 	
 	if(o == objOgre){ return "L2 tanky unit."; }
+	if(o == objOgreMage){ return "L2 tanky unit. Creates illusions of itself."; }
 	if(o == objFighterElite){ return "L2 balanced unit. Throws a javalin at the start of battle."; }
 	if(o == objRogue){ return "L2 striker. Attacks cause poison."; }
 	if(o == objEvoker){ return "L2 ranged attacker. Attacks have a chance to explode and hit multiple enimies."; }

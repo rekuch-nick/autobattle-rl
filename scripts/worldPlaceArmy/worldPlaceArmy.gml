@@ -34,8 +34,9 @@ function worldPlaceArmy(army, aly){
 		c.aly = aly;
 		
 		if(aly == 1){ // player upgrades
-			
-			
+			var m = 1 + (ww.playerHPBonus / 100);
+			c.hp = floor(c.hp * m);
+			c.hpMax = c.hp;
 			
 			
 		}

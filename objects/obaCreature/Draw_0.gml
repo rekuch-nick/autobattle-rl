@@ -1,3 +1,11 @@
+//if(aly == 1){ draw_sprite_stretched(imgAly, 0, xSpot * 32, ySpot * 32, 32, 32); }
+//if(aly == -1){ draw_sprite_stretched(imgFoe, 0, xSpot * 32, ySpot * 32, 32, 32); }
+
+if(ww.state == State.play){
+	if(aly == 1){ draw_sprite_stretched(imgAly, 0, x, y, 32, 32); }
+	if(aly == -1){ draw_sprite_stretched(imgFoe, 0, x, y, 32, 32); }
+}
+
 draw_self();
 if(img != ""){
 	//draw_rectangle(x+4, y+4, x + 28, y + 28, true);

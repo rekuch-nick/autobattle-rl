@@ -40,6 +40,15 @@ if(inCombatWith != noone){
 					mp --;
 					ww.mmap[t.a, t.b] = instance_create_depth(t.a * 32, t.b * 32, depth, summonKind);
 					ww.mmap[t.a, t.b].aly = aly;
+					
+					if(aly == 1 && object_index == objDruid && summonKind == objEntSummon){
+						ww.mmap[t.a, t.b].hp *= ww.playerDruidSummonPower;
+						ww.mmap[t.a, t.b].hp = ww.mmap[t.a, t.b].hpMax;
+						ww.mmap[t.a, t.b].meleeDamMax *= ww.playerDruidSummonPower;
+						if(ww.playerDruidSummonPower > 1){
+							ww.mmap[t.a, t.b].col = ww.cBrownThorn;
+						}
+					}
 				}
 			}
 			if(spell == Spell.healing){

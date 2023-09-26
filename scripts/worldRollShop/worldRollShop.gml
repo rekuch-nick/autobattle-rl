@@ -3,6 +3,7 @@ function worldRollShop(){
 	random_set_seed(seed);
 	repeat(wave * 2){
 		var a = random_range(0, 1);
+		rngCount += a;
 	}
 	
 	
@@ -31,6 +32,7 @@ function worldRollShop(){
 		if(cNum == skip1){ cNum++; }
 		if(cNum == skip2){ cNum++; }
 		var c = getCreature(cNum, ww.playerUnitLevel);
+		if(c.typ == objOgre && playerNumberOf(objOgreMage) > 0){ c.typ = objOgreMage; c.nam = getCreatureName(c.typ); c.cost += 40; }
 		
 		var s = instance_create_depth(x1Purchase, 100 + i * 90, -1, objShopPurchase);
 		s.txt = c.nam; s.price = c.cost; s.unit = c.typ;
@@ -65,6 +67,30 @@ function worldRollShop(){
 		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
 		s.txt = "Unit Level 3"; s.price = 400; s.unit = noone;
 	}
+	
+	
+	var s = instance_create_depth(x2Purchase, 100 + 1 * 90, -1, objShopPurchase);
+	s.txt = "HP Bonus"; s.price = playerHPBonusCost(); s.unit = noone;
+	
+	
+	var tries = 0;
+	var t = ""; var c = 10;
+	do {
+		tries ++;
+		var r = choose(1, 2, 3, 4);
+		if(r == 1 && playerNumberOf(objFighter) > 0 && playerUnitLevel >= 2){ t = "Promote Fighters"; c = playerNumberOf(objFighter) * 25; }
+		if(r == 2 && playerNumberOf(objGoblin) > 0 && playerUnitLevel >= 1){ t = "Promote Goblins"; c = playerNumberOf(objGoblin) * 10; }
+		if(r == 3 && playerNumberOf(objOgre) > 0 && playerUnitLevel >= 3){ t = "Ogres learn Magic"; c = playerNumberOf(objOgre) * 40; }
+		if(r == 4 && playerNumberOf(objDruid) > 0 && playerUnitLevel >= 1 && playerDruidSummonPower < 2){ t = "Druid Power"; c = 45; }
+		
+		
+	} until (t != "" || tries > 20);
+	
+	if(t != ""){
+		var s = instance_create_depth(x2Purchase, 100 + 2 * 90, -1, objShopPurchase);
+		s.txt = t; s.price = c; s.unit = noone;
+	}
+	
 	
 	
 	
