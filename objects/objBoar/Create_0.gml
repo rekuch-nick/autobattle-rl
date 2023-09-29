@@ -4,8 +4,8 @@ event_inherited();
 img = "b";
 col = ww.cPink;
 
-hp = 250;
-hpMax = 250;
+hp = 240;
+hpMax = 240;
 
 moveCDMax = 30;
 

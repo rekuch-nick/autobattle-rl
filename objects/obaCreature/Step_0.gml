@@ -53,7 +53,7 @@ if(inCombatWith != noone){
 			}
 			if(spell == Spell.healing){
 				mp --;
-				healBurst(xSpot, ySpot, 6, aly, 200);
+				healBurst(xSpot, ySpot, 6, aly, 100);
 			}
 			if(spell == Spell.rage){
 				var c = findClosestOther(50, false, aly);
@@ -113,6 +113,11 @@ if(inCombatWith != noone){
 	moveCD --;
 	if(rage > 0){ rage --; moveCD -= 1; }
 	if(moveCD < 1){
+		
+		if(irandom_range(0, 99) < speedUpChance && moveCDMax >= speedMin){
+			moveCDMax -= 2;
+		}
+		
 		moveCD = moveCDMax;
 		
 		var tar = creaturePickTarget();
@@ -159,6 +164,12 @@ if(y > ySpot * 32){ y -= 4; }
 
 
 if(hp < 1){
+	
+	if(aly == 1 && ww.permaDeath){
+		playerLoseUnit(object_index);
+	}
+	
+	
 	ww.checkBattleEnd = true;
 	
 	with(obaCreature){

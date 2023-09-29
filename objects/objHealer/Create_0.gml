@@ -23,7 +23,7 @@ rangeDamMax = 24;
 atkCDMax = 30;
 
 
-mp = 5;
+mp = 4;
 spell = Spell.healing;
-spellChance = 18;
+spellChance = 30;
 spellChanceLoss = 2;

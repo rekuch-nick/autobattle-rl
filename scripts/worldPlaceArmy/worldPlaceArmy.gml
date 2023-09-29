@@ -38,7 +38,11 @@ function worldPlaceArmy(army, aly){
 			c.hp = floor(c.hp * m);
 			c.hpMax = c.hp;
 			
-			
+			//unused
+			if(c.object_index == objHobbit && ww.playerHobitRange >= 2){ 
+				c.combatRange += 6; 
+				c.rangeDamMin += 4;
+			}
 		}
 		
 		mmap[a, b] = c;

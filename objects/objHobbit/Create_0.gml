@@ -4,8 +4,8 @@ event_inherited();
 img = "h";
 col = ww.cYellowSoft;
 
-hp = 80;
-hpMax = 80;
+hp = 100;
+hpMax = 100;
 
 
 moveCDMax = 40;
@@ -18,4 +18,4 @@ shotType = objStone;
 rangeDamMin = 1; 
 rangeDamMax = 6;
 
-atkCDMax = 55;
+atkCDMax = 50;

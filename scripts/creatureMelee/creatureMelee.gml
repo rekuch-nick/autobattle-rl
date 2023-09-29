@@ -3,6 +3,7 @@ function creatureMelee(c1, c2){
 	var dam = irandom_range(c1.meleeDamMin, c1.meleeDamMax);
 	if(c2.frozen > 0 && !c2.freezeImmune){ dam = c1.meleeDamMax; }
 	
+	dam = clamp(dam - c2.dr, 1, dam);
 	c2.hp -= dam;
 	
 	

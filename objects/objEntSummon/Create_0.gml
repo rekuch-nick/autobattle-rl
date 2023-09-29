@@ -4,14 +4,14 @@ event_inherited();
 img = "t";
 col = ww.cSnakeGreen;
 
-hp = 50;
-hpMax = 50;
+hp = 85;
+hpMax = 85;
 
-moveCDMax = 30;
+moveCDMax = 20;
 
 combatRange = 1;
-meleeDamMin = 1;
-meleeDamMax = 6;
+meleeDamMin = 2;
+meleeDamMax = 12;
 
 atkCDMax = 25;
 

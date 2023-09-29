@@ -72,3 +72,9 @@ stepTowards = noone;
 
 targetRandomBonus = 0;
 targetLowBonus = 0;
+
+dr = 0;
+
+
+speedUpChance = 0;
+speedMin = moveCDMax;

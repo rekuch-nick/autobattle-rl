@@ -36,6 +36,9 @@ if(mindControl){
 	draw_set_alpha(1);
 }
 
-var c = aly == 1 ? c_lime : c_red;
-var w = max(0, (hp / hpMax) * 24);
-draw_rectangle_color(x+4, y+26, x+4+w, y+28, c, c, c, c, false);
+
+if(ww.state == State.play){
+	var c = aly == 1 ? c_lime : c_red;
+	var w = max(0, (hp / hpMax) * 24);
+	draw_rectangle_color(x+4, y+26, x+4+w, y+28, c, c, c, c, false);
+}

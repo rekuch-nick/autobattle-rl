@@ -17,12 +17,12 @@ shotType = objStone;
 rangeDamMin = 1;
 rangeDamMax = 6;
 
-atkCDMax = 40;
+atkCDMax = 30;
 
 moveCDMax = 40;
 
-mp = 10;
+mp = 6;
 spell = Spell.summon;
 summonKind = objEntSummon;
-spellChance = 25;
+spellChance = 30;
 spellChanceLoss = 2;

@@ -11,7 +11,7 @@ moveCDMax = 30;
 
 combatRange = 1;
 meleeDamMin = 1;
-meleeDamMax = 6;
+meleeDamMax = 2;
 
 atkCDMax = 15;
 

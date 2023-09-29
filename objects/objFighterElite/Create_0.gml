@@ -21,8 +21,8 @@ limitedAmmo = true;
 ammo = 2;
 
 shotType = objArrow;
-rangeDamMin = 4; 
-rangeDamMax = 24;
+rangeDamMin = 6; 
+rangeDamMax = 36;
 
 
 

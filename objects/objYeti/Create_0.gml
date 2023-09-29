@@ -3,20 +3,22 @@ event_inherited();
 
 img = "Y";
 col = ww.cBlueSoft;
+col = c_red;
 
 
-hp = 450;
-hpMax = 450;
+trollRegen = .1;
 
+hp = 1450;
+hpMax = 1450;
+dr = 5;
 
 
 combatRange = 1;
-meleeDamMin = 1;
-meleeDamMax = 24;
+meleeDamMin = 6;
+meleeDamMax = 36;
 
-atkCDMax = 40;
-
-moveCDMax = 40;
+atkCDMax = 25;
+moveCDMax = 25;
 
 meleeFreezeChance = 15;
 meleeFreezePower = 120;

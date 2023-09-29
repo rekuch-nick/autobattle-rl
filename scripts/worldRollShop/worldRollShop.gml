@@ -6,6 +6,9 @@ function worldRollShop(){
 		rngCount += a;
 	}
 	
+	permaDeath = false;
+	if( (wave + 1) % 3 == 0){ permaDeath = true; }
+	//permaDeath = true;
 	
 	
 	x1Purchase = 740;
@@ -59,13 +62,13 @@ function worldRollShop(){
 	
 	if(playerUnitLevel == 0){
 		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
-		s.txt = "Unit Level 1"; s.price = 100; s.unit = noone;
+		s.txt = "Unit Level 1"; s.price = 150; s.unit = noone;
 	} else if(playerUnitLevel == 1){
 		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
-		s.txt = "Unit Level 2"; s.price = 200; s.unit = noone;
+		s.txt = "Unit Level 2"; s.price = 300; s.unit = noone;
 	} else if(playerUnitLevel == 2){
 		var s = instance_create_depth(x2Purchase, 100, -1, objShopPurchase);
-		s.txt = "Unit Level 3"; s.price = 400; s.unit = noone;
+		s.txt = "Unit Level 3"; s.price = 500; s.unit = noone;
 	}
 	
 	
@@ -82,6 +85,7 @@ function worldRollShop(){
 		if(r == 2 && playerNumberOf(objGoblin) > 0 && playerUnitLevel >= 1){ t = "Promote Goblins"; c = playerNumberOf(objGoblin) * 10; }
 		if(r == 3 && playerNumberOf(objOgre) > 0 && playerUnitLevel >= 3){ t = "Ogres learn Magic"; c = playerNumberOf(objOgre) * 40; }
 		if(r == 4 && playerNumberOf(objDruid) > 0 && playerUnitLevel >= 1 && playerDruidSummonPower < 2){ t = "Druid Power"; c = 45; }
+		//if(r == 5 && playerNumberOf(objHobbit) > 0 && playerUnitLevel >= 0 && playerHobitRange < 2){ t = "Stone Throw Range"; c = 45; }
 		
 		
 	} until (t != "" || tries > 20);
@@ -114,6 +118,11 @@ function worldRollShop(){
 	
 	s = instance_create_depth(200, room_height - 70,-1, objButton);
 	s.txt = "Press ENTER to fight wave " + string(wave);
+	
+	//s.txt += "\n" + s;
+	if(permaDeath){ s.txt += "\nPERMADEATH STAGE"; }
+	
+	
 	s.w = room_width - 400;
 	s.buttonCode = ButtonCode.startFight;
 	

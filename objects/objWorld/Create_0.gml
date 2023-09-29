@@ -20,6 +20,7 @@ cBlueOrc = $B28100;
 cBrownThorn = $053C66;
 
 checkBattleEnd = false;
+permaDeath = false;
 
 draw_set_font(fntPlain);
 draw_set_halign(fa_center);
@@ -38,24 +39,29 @@ startPressed = false
 
 rngCount = 0;
 
-
-
+startingLevel = 0;
+//startingLevel = 1; /////////////
 
 
 playerCoins = 60;
 //playerCoins = 999990060; //////
-playerUnitLevel = 0;
+//playerCoins = 120;
+
+playerUnitLevel = startingLevel;
 playerUnitMax = 20;
 playerUnitMaxMax = 161;
 playerSquadMax = 14;
 
 playerHPBonus = 0;
 playerDruidSummonPower = 1;
+playerHobitRange = 1;
 
 
-var s = instance_create_depth(64, 100, 0, objPlayerSquad);
+
+var s = instance_create_depth(64, 100, -1, objPlayerSquad);
 s.nam = "Fighter"; s.unit = objFighter; s.num = 4;
 //s.nam = "DEBUG"; s.unit = objArcherLong; s.num = 4;
+//s.nam = "Fighter Elite"; s.unit = objFighterElite; s.num = 4;
 
 
 //var s = instance_create_depth(64, 132, 0, objPlayerSquad);

@@ -32,6 +32,8 @@ if(ww.clickL){
 					playerUnitReplace(objOgre, objOgreMage);
 				} else if (txt == "Druid Power") {
 					ww.playerDruidSummonPower ++;
+				} else if (txt == "Stone Throw Range") {
+					ww.playerHobitRange ++;
 				
 				} else if (txt == "Max Army Size") {
 					ww.playerUnitMax = clamp(ww.playerUnitMax + 10, 0, ww.playerUnitMaxMax);

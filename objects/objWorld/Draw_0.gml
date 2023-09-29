@@ -19,6 +19,14 @@ if(state == State.shop){
 	draw_set_halign(fa_center);
 	draw_text_color(1020, 10, "$" + string(playerCoins), c_yellow, c_yellow, c_yellow, c_yellow, 1);
 	
+	
+	if(permaDeath){
+		for(var b = 200; b < room_height; b+= 36){
+			var n = (1 - (ms * .03) ) + (b / 500);
+			draw_text_color(100, b, "WARNING", c_maroon, c_maroon, c_maroon, c_maroon, n);
+			draw_text_color(room_width - 100, b, "WARNING", c_maroon, c_maroon, c_maroon, c_maroon, n);
+		}
+	}
 }
 
 if(state == State.playStarting){

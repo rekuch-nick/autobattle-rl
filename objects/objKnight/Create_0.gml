@@ -7,7 +7,7 @@ col = c_gray;
 hp = 600;
 hpMax = 600;
 
-
+dr = 1;
 
 combatRange = 1;
 meleeDamMin = 4;
